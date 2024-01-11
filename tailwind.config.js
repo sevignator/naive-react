@@ -4,10 +4,10 @@ import colors from 'tailwindcss/colors';
 export default {
   content: ['./src/**/*.{html,ts}'],
   theme: {
-    extend: {},
-    colors: {
-      white: colors.white,
-      gray: colors.slate,
+    extend: {
+      colors: {
+        gray: colors.slate,
+      },
     },
   },
   plugins: [],
