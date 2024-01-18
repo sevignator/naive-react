@@ -8,13 +8,13 @@ export function createNewElementFieldset() {
   const classInput = createNewInput(newElement, 'Class', 'class');
   const textInput = createNewInput(newElement, 'Text', 'text');
 
+
   textInput.classList.add('col-span-full');
 
   fieldsetEl.classList.add(
     'grid',
-    'grid-cols-2',
+    'grid-cols-[1fr_3fr]',
     'gap-4',
-    'mt-6',
     'p-4',
     'bg-gray-200',
     'border',
