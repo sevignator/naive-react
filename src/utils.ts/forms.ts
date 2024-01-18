@@ -17,7 +17,10 @@ export function createNewElementFieldset() {
     'mt-6',
     'p-4',
     'bg-gray-200',
-    'rounded-md',
+    'border',
+    'border-gray-300',
+    'rounded-lg',
+    'shadow-sm',
   );
   fieldsetEl.append(typeSelect2, classInput, textInput);
 
@@ -34,7 +37,7 @@ function createNewInput(
   newInputLabel.classList.add('flex', 'flex-col', 'gap-1', 'text-gray-600');
 
   const newInputEl = document.createElement('input');
-  newInputEl.classList.add('p-1', 'rounded-sm');
+  newInputEl.classList.add('p-2', 'rounded-md', 'bg-gray-100',  'border', 'border-gray-300');
   newInputEl.name = name;
   newInputEl.type = type;
 
@@ -57,7 +60,7 @@ function createNewSelect(
   newSelectLabel.classList.add('flex', 'flex-col', 'gap-1', 'text-gray-600');
 
   const newSelectEl = document.createElement('select');
-  newSelectEl.classList.add('p-1', 'rounded-sm');
+  newSelectEl.classList.add('p-2', 'rounded-md', 'bg-gray-100',  'border', 'border-gray-300');
   newSelectEl.name = name;
 
   for (const optionText of options) {
@@ -80,8 +83,8 @@ function updateElement(event: Event, element: NaiveReactElement) {
     throw new Error('No event target was found.')
   }
 
-  const inputName: InputNames = event.target.name;
-  const inputValue: string = event.target.value;
+  const inputName: string = (event.target as HTMLInputElement | HTMLSelectElement).name;
+  const inputValue: string = (event.target as HTMLInputElement | HTMLSelectElement).value;
 
   switch (inputName) {
     case 'type':

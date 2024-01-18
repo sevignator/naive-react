@@ -10,7 +10,7 @@ export default {
       },
     },
   },
-  plugins: [],
+  plugins: [require('@tailwindcss/forms')],
   // This adds all Tailwind classes to the bundle, making them accessible from the browser.
   safelist: [
     {
