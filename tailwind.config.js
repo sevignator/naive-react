@@ -2,7 +2,7 @@ import colors from 'tailwindcss/colors';
 
 /** @type {import('tailwindcss').Config} */
 export default {
-  content: ['./src/**/*.{html,ts}'],
+  content: ['./index.html', './src/**/*.{js,ts,jsx,tsx}'],
   theme: {
     extend: {
       colors: {
@@ -11,8 +11,7 @@ export default {
     },
   },
   plugins: [],
-
-  // Add all Tailwind class to bundle to make them accessible from the browser.
+  // This adds all Tailwind classes to the bundle, making them accessible from the browser.
   safelist: [
     {
       pattern: /.*/,
