@@ -1,12 +1,15 @@
-import { NaiveReactElement } from "./types";
+import { NaiveReactElement } from './types';
 
 export const rootElement = document.querySelector<HTMLDivElement>('#root')!;
 
-export const createBtn = document.querySelector<HTMLButtonElement>('#create-btn')!;
+export const createBtn =
+  document.querySelector<HTMLButtonElement>('#create-btn')!;
 
-export const resetBtn = document.querySelector<HTMLButtonElement>('#reset-btn')!;
+export const resetBtn =
+  document.querySelector<HTMLButtonElement>('#reset-btn')!;
 
-export const elementsForm = document.querySelector<HTMLFormElement>('#elements-form')!;
+export const elementsForm =
+  document.querySelector<HTMLFormElement>('#elements-form')!;
 
 export const createdElements: NaiveReactElement[] = [];
 

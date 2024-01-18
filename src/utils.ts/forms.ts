@@ -1,13 +1,22 @@
-import { createNewElement, createdElements, render, rootElement } from "./elements";
-import { InputNames, NaiveReactElement } from "./types";
+import {
+  createNewElement,
+  createdElements,
+  render,
+  rootElement,
+} from './elements';
+import { InputNames, NaiveReactElement } from './types';
 
 export function createNewElementFieldset() {
-  const newElement = createNewElement()
+  const newElement = createNewElement();
   const fieldsetEl = document.createElement('fieldset');
-  const typeSelect2 = createNewSelect(newElement, 'Type', 'type', ['p', 'h1', 'h2', 'h3']);
+  const typeSelect2 = createNewSelect(newElement, 'Type', 'type', [
+    'p',
+    'h1',
+    'h2',
+    'h3',
+  ]);
   const classInput = createNewInput(newElement, 'Class', 'class');
   const textInput = createNewInput(newElement, 'Text', 'text');
-
 
   textInput.classList.add('col-span-full');
 
@@ -37,7 +46,13 @@ function createNewInput(
   newInputLabel.classList.add('flex', 'flex-col', 'gap-1', 'text-gray-600');
 
   const newInputEl = document.createElement('input');
-  newInputEl.classList.add('p-2', 'rounded-md', 'bg-gray-100',  'border', 'border-gray-300');
+  newInputEl.classList.add(
+    'p-2',
+    'rounded-md',
+    'bg-gray-100',
+    'border',
+    'border-gray-300',
+  );
   newInputEl.name = name;
   newInputEl.type = type;
 
@@ -60,13 +75,19 @@ function createNewSelect(
   newSelectLabel.classList.add('flex', 'flex-col', 'gap-1', 'text-gray-600');
 
   const newSelectEl = document.createElement('select');
-  newSelectEl.classList.add('p-2', 'rounded-md', 'bg-gray-100',  'border', 'border-gray-300');
+  newSelectEl.classList.add(
+    'p-2',
+    'rounded-md',
+    'bg-gray-100',
+    'border',
+    'border-gray-300',
+  );
   newSelectEl.name = name;
 
   for (const optionText of options) {
     const newOptionEl = document.createElement('option');
     newOptionEl.textContent = optionText;
-    newSelectEl.append(newOptionEl)
+    newSelectEl.append(newOptionEl);
   }
 
   newSelectLabel.append(labelText, newSelectEl);
@@ -80,11 +101,15 @@ function createNewSelect(
 
 function updateElement(event: Event, element: NaiveReactElement) {
   if (event.target === null) {
-    throw new Error('No event target was found.')
+    throw new Error('No event target was found.');
   }
 
-  const inputName: string = (event.target as HTMLInputElement | HTMLSelectElement).name;
-  const inputValue: string = (event.target as HTMLInputElement | HTMLSelectElement).value;
+  const inputName: string = (
+    event.target as HTMLInputElement | HTMLSelectElement
+  ).name;
+  const inputValue: string = (
+    event.target as HTMLInputElement | HTMLSelectElement
+  ).value;
 
   switch (inputName) {
     case 'type':

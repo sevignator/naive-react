@@ -8,14 +8,14 @@ As an added challenge, this codebase is built using TypeScript.
 
 1. Install the project dependencies with NPM.
 
-    ```sh
-    npm install
-    ```
+   ```sh
+   npm install
+   ```
 
 2. Run the project on your localhost.
 
-    ```sh
-    npm start
-    ```
+   ```sh
+   npm start
+   ```
 
 3. Access the project in your browser. The default URL is: http://localhost:1234.

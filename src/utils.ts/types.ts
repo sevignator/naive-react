@@ -5,4 +5,3 @@ export type NaiveReactElement = {
 };
 
 export type InputNames = 'type' | 'class' | 'text';
-
