@@ -11,4 +11,11 @@ export default {
     },
   },
   plugins: [],
+
+  // Add all Tailwind class to bundle to make them accessible from the browser.
+  safelist: [
+    {
+      pattern: /.*/,
+    },
+  ],
 };
